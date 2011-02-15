@@ -1,0 +1,31 @@
+Gallery:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [title]
+      unique: true
+  columns:
+    title:
+      type : string(255)
+    description:
+      type : string(255)
+    dans_gallerie: boolean
+
+Photos:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [title]
+      unique: true
+  columns:
+    title:
+      type : string(255)
+    picpath:
+      type : string(255)
+    gallery_id:
+      type : integer(8)
+    is_default:     { type: boolean, default: false }
+  relations:
+    Gallery:
+      local: gallery_id
+      onDelete: CASCADE

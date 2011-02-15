@@ -1,0 +1,26 @@
+all:
+  sfImageTransformPlugin:
+    default_adapter: GD #, ImageMagick
+    default_image:
+      mime_type: image/png
+      filename: Untitled.png
+      width: 100
+      height: 100
+      color: '#FFFFFF'
+    font_dir: /usr/share/fonts/truetype/msttcorefonts
+    mime_type:
+      auto_detect: true
+      library: gd_mime_type #  gd_mime_type (GD), Fileinfo (PECL), MIME_Type (PEAR)
+  sfMultipleAjaxUploadGalleryPlugin:
+    thumbnails_sizes:
+      - 50
+      - 150
+      - 300
+      - 450
+    default_size: 50 # default, if not in thumbnails_sizes array new thumbnail is created
+    portfolio_thumbnails_size: 150
+    onDelete: cascade # none or cascade, cascade remove all gallery's files
+    path_gallery: <?php echo sfConfig::get("sf_upload_dir")."/gallery/\n" ;?>
+    theme: admin
+    
+

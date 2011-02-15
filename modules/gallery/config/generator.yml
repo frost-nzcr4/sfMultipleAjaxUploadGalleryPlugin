@@ -1,0 +1,44 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           gallery
+    theme:                 <?php echo sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_theme")."\n"; ?>
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          gallery
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        created_at:        { label: Date de création, date_format: dd/MM/yyyy }
+        updated_at:        { label: Date de modification, date_format: dd/MM/yyyy }
+        title:             { label: Nom }
+        description:       { label: Description }
+      list:
+        title:             Les galeries
+        display:           [=id, =title]
+#        batch_actions:
+#          _delete: ~
+#          _purge: purge
+      filter:  ~
+      form:    ~
+      edit:
+        title:             Modifier une galerie
+        display:
+          "Galerie":       [id, title, description, dans_gallerie]
+          "Photos":        [_photoUpload]
+        actions:
+          _list: ~
+          _delete: ~
+          _save: ~
+          _purge:
+            name: Vider la gallerie
+            action: purge
+      new:
+        title:             Créer une galerie
+        display:
+          "Galerie":       [id, title, description]
