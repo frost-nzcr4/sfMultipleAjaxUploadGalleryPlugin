@@ -7,34 +7,36 @@
         text-align:center;
         width:160px;
     }
-    #controls .ss-controls .play,#controls .ss-controls .pause,#controls .nav-controls .next,#controls .nav-controls .prev{
-        background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/play.png") no-repeat scroll 0 0 transparent;
+#controls .ss-controls .play, #controls .ss-controls .pause, #controls .nav-controls .next, #controls .nav-controls .prev {
         display:block;
         height:50px;
         width:50px;
         margin:0px 100px;
         position:absolute;
-    }
+}
+#controls .ss-controls .play {
+	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat -50px 0px;
+}
 #controls .ss-controls .pause {
 	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat -100px 0px;
 }
-    #controls .nav-controls .next{
-        margin-left:160px;
-        background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/next.png") no-repeat scroll 0 0 transparent;
-    }
+#controls .nav-controls .next {
+	margin-left: 160px;
+	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat -150px 0px;
+}
 #controls .nav-controls .prev {
 	margin-left: 40px;
 	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat 0px 0px;
 }
-    #controls .ss-controls .play:hover{
-        background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/play-hover.png") no-repeat scroll 0 0 transparent;
-    }
+#controls .ss-controls .play:hover{
+	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat -50px -50px;
+}
 #controls .ss-controls .pause:hover {
 	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat -100px -50px;
 }
-    #controls .nav-controls .next:hover{
-        background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/next-hover.png") no-repeat scroll 0 0 transparent;
-    }
+#controls .nav-controls .next:hover {
+	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat -150px -50px;
+}
 #controls .nav-controls .prev:hover {
 	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat 0px -50px;
 }
