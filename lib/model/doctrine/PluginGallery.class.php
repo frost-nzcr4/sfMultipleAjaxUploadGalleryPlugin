@@ -32,7 +32,7 @@ abstract class PluginGallery extends BaseGallery {
             }
             else
             {
-                if(substr($elem, -2, 2) !== '..' && substr($elem, -1, 1) !== '.')
+                if (substr($elem, -2, 2) !== '..' && substr($elem, -1, 1) !== '.')
                 {
                     unlink($dir.'/'.$elem);
                 }
@@ -40,7 +40,7 @@ abstract class PluginGallery extends BaseGallery {
         }
 
         $handle = opendir($dir);
-        while($elem = readdir($handle))
+        while ($elem = readdir($handle))
         {
             if(is_dir($dir.'/'.$elem) && substr($elem, -2, 2) !== '..' && substr(
                     $elem, -1, 1) !== '.')
@@ -52,23 +52,25 @@ abstract class PluginGallery extends BaseGallery {
         rmdir($dir);
     }
 
-    public function setPhotoDefaut($photoId) {
+    public function setPhotoDefaut($photoId)
+    {
         Doctrine_Query::create()
                 ->update('Photos p')
                 ->set('p.is_default', '?', false)
                 ->where('p.gallery_id = ?', $this->getId())
                 ->execute();
-        
+
         Doctrine_Query::create()
                 ->update('Photos p')
                 ->set('p.is_default', '?', true)
                 ->andWhere('p.id = ?', $photoId)
                 ->execute();
-        
+
         return true;
     }
 
-    public function getPhotoDefault() {
+    public function getPhotoDefault()
+    {
         $default = Doctrine::getTable('Photos')->getDefault($this->getId());
         if(!$default instanceof Photos ){
             $default = new Photos();

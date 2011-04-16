@@ -1,6 +1,6 @@
 all:
   sfImageTransformPlugin:
-    default_adapter: GD #, ImageMagick
+    default_adapter: GD             # GD | ImageMagick
     default_image:
       mime_type: image/png
       filename: Untitled.png
@@ -10,7 +10,8 @@ all:
     font_dir: /usr/share/fonts/truetype/msttcorefonts
     mime_type:
       auto_detect: true
-      library: gd_mime_type #  gd_mime_type (GD), Fileinfo (PECL), MIME_Type (PEAR)
+      library: gd_mime_type         #  gd_mime_type (GD), Fileinfo (PECL), MIME_Type (PEAR)
+
   sfMultipleAjaxUploadGalleryPlugin:
     thumbnails_sizes:
       - 50

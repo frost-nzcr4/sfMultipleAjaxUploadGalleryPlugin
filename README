@@ -43,32 +43,35 @@ Then clear the cache:
 A last task to do is to enable the gallery and photos modules (backend) and the portfolio module (frontend) in the settings.yml specific app config's folder.
 /apps/backend/settings.yml
 You have to enter if it doesn't already exist this line
-	
-	all:  
+
+    # /apps/backend/settings.yml	
+	all:
 	  .settings:
 	    enabled_modules: [gallery, photos]
 
 If it does exists, you just have to add in the list the gallery module like below :
 
- 	all:  
+	# /apps/backend/settings.yml
+ 	all:
 	  .settings:
 	    enabled_modules: [myOthersModule, gallery, photos]
 
-/apps/frontend/settings.yml
 same procedure that before
+
+	# /apps/frontend/settings.yml
 	all:  
 	  .settings:
 	    enabled_modules: [portfolio]
 
 ----------- or -----
 
+	# /apps/frontend/settings.yml
  	all:  
 	  .settings:
 	    enabled_modules: [myOthersModule, portfolio]
 
 You can now access to the gallery and get its awesome functionnalities.
-The plugin is customizable :
-So you can :
+The plugin is customizable. So you can :
 
 # choose the different sizes that you want for your thumbnails :
 

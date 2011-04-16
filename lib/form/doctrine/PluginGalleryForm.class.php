@@ -1,5 +1,4 @@
 <?php
-
 /**
  * PluginGallery form.
  *
@@ -16,9 +15,9 @@ abstract class PluginGalleryForm extends BaseGalleryForm
         $this->removeFields();
   }
 
-    protected function removeFields() {
-        unset(
-                $this['created_at'], $this['updated_at']
-        );
-    }
+  protected function removeFields() {
+    unset(
+      $this['created_at'], $this['updated_at']
+    );
+  }
 }

@@ -49,14 +49,12 @@
 </div>
 <div id="thumbs" class="navigation" style="padding: 52px 0">
     <ul class="thumbs noscript">
-
         <?php
-        $uploadDir = sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_path_gallery");
-        $webDir = sfConfig::get("sf_web_dir");
+        $uploadDir = sfConfig::get('app_sfMultipleAjaxUploadGalleryPlugin_path_gallery');
+        $webDir = sfConfig::get('sf_web_dir');
         $correctPath = substr($uploadDir, strlen($webDir), strlen($uploadDir) - strlen($webDir)); ?>
 
-        <?php foreach ($gallery->getPhotos() as $photo) {
- ?>
+        <?php foreach ($gallery->getPhotos() as $photo) { ?>
             <li>
                 <a class="thumb" name="<?php echo $photo->getTitle() ?>" href="<?php echo $correctPath.$gallery->getId()."/300/".$photo->getPicPath() ?>" title="<?php echo $photo->getTitle() ?>">
                     <img src="<?php echo $correctPath.$gallery->getId()."/".sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_portfolio_thumbnails_size")."/".$photo->getPicPath() ?>" alt="<?php echo $photo->getTitle() ?>" />
@@ -68,7 +66,7 @@
                     <div class="image-desc"><?php echo $photo->getTitle() ?></div>
                 </div>
             </li>
-<?php } ?>
+		<?php } ?>
     </ul>
 </div>
 <div id="controls" class="controls"></div>

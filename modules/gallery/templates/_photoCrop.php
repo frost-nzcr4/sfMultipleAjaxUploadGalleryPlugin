@@ -36,7 +36,7 @@
                 <td class="tbl-border-left"></td>
                 <td style="text-align: center">
                     <?php
-                    $uploadDir = sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_path_gallery");
+                    $uploadDir = sfConfig::get('app_sfMultipleAjaxUploadGalleryPlugin_path_gallery');
                     $webDir = sfConfig::get("sf_web_dir");
                     $upload_gallery_path = substr($uploadDir, strlen($webDir), strlen($uploadDir) - strlen($webDir)); ?>
                     <img id="photo" onclick="crop(this)" src="<?php echo $upload_gallery_path . $photo->getGallery()->getSlug() . "/" . $photo->getPicpath(); ?>"/>

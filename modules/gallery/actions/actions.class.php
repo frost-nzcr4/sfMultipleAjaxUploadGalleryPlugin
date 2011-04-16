@@ -11,14 +11,15 @@ require_once dirname(__FILE__) . '/../lib/galleryGeneratorHelper.class.php';
  * @author     leny
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class galleryActions extends autoGalleryActions {
-
-    public function executeUpload(sfWebRequest $request) {
+class galleryActions extends autoGalleryActions
+{
+    public function executeUpload(sfWebRequest $request)
+    {
         $this->gallery = Doctrine::getTable("gallery")->find($request->getParameter("gallery_id"));
         $this->forward404unless($this->gallery);
 
         // list of valid extensions, ex. array("jpeg", "xml", "bmp")
-        $allowedExtensions = array("jpeg","png","gif","bmp","jpg");
+        $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif', 'bmp');
         // max file size in bytes
         $sizeLimit = 6 * 1024 * 1024;
 
@@ -53,16 +54,15 @@ class galleryActions extends autoGalleryActions {
 
 //        echo htmlspecialchars(json_encode($result), ENT_NOQUOTES);
         return $this->renderText(htmlspecialchars(json_encode($result), ENT_NOQUOTES));
-        
     }
-
 
     /**
      * ajax pour definir une photo par defaut
      *
      * @param sfWebRequest $request
      */
-    public function executeAjaxPhotoDefault(sfWebRequest $request) {
+    public function executeAjaxPhotoDefault(sfWebRequest $request)
+    {
         if ($request->isXmlHttpRequest()) {
             $photo = $this->getRoute()->getObject();
             $gallery = $photo->getGallery();
@@ -83,7 +83,8 @@ class galleryActions extends autoGalleryActions {
      *
      * @param sfWebRequest $request
      */
-    public function executeAjaxPhotoDelete(sfWebRequest $request) {
+    public function executeAjaxPhotoDelete(sfWebRequest $request)
+    {
         if ($request->isXmlHttpRequest()) {
             $photo = $this->getRoute()->getObject();
             $gallery = $photo->getGallery();

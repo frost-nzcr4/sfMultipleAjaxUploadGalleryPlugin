@@ -12,6 +12,7 @@ class PluginBackendPhotosForm extends PluginPhotosForm {
         $this->widgetSchema['picpath'] = new sfWidgetFormInputFile(array('label' => 'Image'));
 
     }
+
     protected function removeFields() {
         unset($this['created_at'], $this['updated_at'], $this['slug'], $this['is_default']);
     }

@@ -10,15 +10,14 @@
  */
 abstract class PluginPhotosForm extends BasePhotosForm
 {
-
-      public function setup()
-      {
+	public function setup()
+	{
         parent::setup();
         $this->removeFields();
 
         $this->widgetSchema->setLabels(array(
-                    'title' => 'Titre :',
-                    'picpath' => 'Chemin <em>*</em>:',
+            'title' => 'Titre :',
+            'picpath' => 'Chemin <em>*</em>:',
         ));
         $path_gallery = sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_path_gallery");
         $default_size = sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_default_size");
@@ -41,13 +40,15 @@ abstract class PluginPhotosForm extends BasePhotosForm
         $this->disableCSRFProtection();
     }
 
-    protected function removeFields() {
+    protected function removeFields()
+    {
         unset(
-                $this['created_at'], $this['updated_at']
+            $this['created_at'], $this['updated_at']
         );
     }
 
-    public function generatePicpathFilename(sfValidatedFile $file) {
+    public function generatePicpathFilename(sfValidatedFile $file)
+    {
         return $file->getOriginalName();
     }
 }
