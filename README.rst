@@ -56,7 +56,7 @@ Get the plugin's resources by typing:
 
 Then clear the cache:
 
-    symfony cc
+    `symfony cc` or `symfony cache:clear`
 
 A last task to do is to enable the gallery and photos modules (backend) and the
 portfolio module (frontend) in the settings.yml specific app config's folder.
