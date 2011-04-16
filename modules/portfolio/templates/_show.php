@@ -15,29 +15,29 @@
         margin:0px 100px;
         position:absolute;
     }
-    #controls .ss-controls .pause{
-        background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/pause.png") no-repeat scroll 0 0 transparent;
-    }
+#controls .ss-controls .pause {
+	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat -100px 0px;
+}
     #controls .nav-controls .next{
         margin-left:160px;
         background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/next.png") no-repeat scroll 0 0 transparent;
     }
-    #controls .nav-controls .prev{
-        margin-left:40px;
-        background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/previous.png") no-repeat scroll 0 0 transparent;
-    }
+#controls .nav-controls .prev {
+	margin-left: 40px;
+	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat 0px 0px;
+}
     #controls .ss-controls .play:hover{
         background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/play-hover.png") no-repeat scroll 0 0 transparent;
     }
-    #controls .ss-controls .pause:hover{
-        background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/pause-hover.png") no-repeat scroll 0 0 transparent;
-    }
+#controls .ss-controls .pause:hover {
+	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat -100px -50px;
+}
     #controls .nav-controls .next:hover{
         background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/next-hover.png") no-repeat scroll 0 0 transparent;
     }
-    #controls .nav-controls .prev:hover{
-        background:url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/previous-hover.png") no-repeat scroll 0 0 transparent;
-    }
+#controls .nav-controls .prev:hover {
+	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat 0px -50px;
+}
 </style>
 
 <div class="slideshow-container">
