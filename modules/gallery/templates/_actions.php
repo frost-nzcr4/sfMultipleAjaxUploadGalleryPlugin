@@ -1,12 +1,12 @@
 <div id="<?php echo $contextual? "contextual_":"" ?>actions_<?php echo $photo->getId() ?>" <?php echo !$contextual?'class="photo_action_full"':"";?> style="display: none;">
-    
+
 <?php
 $uploadDir = sfConfig::get('app_sfMultipleAjaxUploadGalleryPlugin_path_gallery');
 $webDir = sfConfig::get("sf_web_dir");
 $upload_gallery_path = substr($uploadDir, strlen($webDir), strlen($uploadDir) - strlen($webDir));
 $sizes = sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_thumbnails_sizes");
-foreach ($sizes as $i=>$size) {
-    if($size>150){
+foreach ($sizes as $i => $size) {
+    if ($size>150) {
         $size = $sizes[$i-1];
         break;
     }

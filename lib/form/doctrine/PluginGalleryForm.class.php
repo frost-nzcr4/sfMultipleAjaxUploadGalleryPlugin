@@ -11,13 +11,14 @@ abstract class PluginGalleryForm extends BaseGalleryForm
 {
   public function setup()
   {
-        parent::setup();
-        $this->removeFields();
+      parent::setup();
+      $this->removeFields();
   }
 
-  protected function removeFields() {
-    unset(
-      $this['created_at'], $this['updated_at']
-    );
+  protected function removeFields()
+  {
+      unset(
+          $this['created_at'], $this['updated_at']
+      );
   }
 }

@@ -32,7 +32,7 @@ class galleryActions extends autoGalleryActions
         }
 
         $result = $uploader->handleUpload(sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_path_gallery").$this->gallery->getId()."/");
-        
+
         // to pass data through iframe you will need to encode all html tags
 
         /*****************************************************************/
@@ -46,8 +46,8 @@ class galleryActions extends autoGalleryActions
             $photo->setTitle("");
             $photo->setSlug(PluginUtils::slugify($file).time());
             if ($photo->save()) {
-            $ok = 'success';
-            }else{
+                $ok = 'success';
+            } else {
                 $ok = "failed";
             }
         }
@@ -126,7 +126,7 @@ class galleryActions extends autoGalleryActions
         $query = "DELETE FROM `photos` WHERE `gallery_id` = ".$request->getParameter('id');
         $dbh = Doctrine_Manager::getInstance()->getCurrentConnection()->getDbh();
         $ok = $dbh->query($query);
-        
+
         return $this->redirect('/backend.php/gallery/'.$request->getParameter('id')."/edit");
     }
 }

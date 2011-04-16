@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -61,4 +61,3 @@ class PluginUtils {
       echo javascript_tag($code);
     }
 }
-?>
