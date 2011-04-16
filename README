@@ -85,9 +85,11 @@ The plugin is customizable. So you can :
   sfMultipleAjaxUploadGalleryPlugin:
     default_size: 50 # default, if not in thumbnails_sizes array new thumbnail is created
 
-# Choose the portfolio thumbnail size :
-  sfMultipleAjaxUploadGalleryPlugin:
-    portfolio_thumbnails_size: 150
+# Choose the portfolio thumbnail and full image sizes:
+
+    sfMultipleAjaxUploadGalleryPlugin:
+        portfolio_thumbnails_size: 150
+        portfolio_full_size: 300
 
 # Chose the behavior when deleting a gallery :
   sfMultipleAjaxUploadGalleryPlugin:

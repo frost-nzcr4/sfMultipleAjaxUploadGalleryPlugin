@@ -20,6 +20,7 @@ all:
       - 450
     default_size: 50 # default, if not in thumbnails_sizes array new thumbnail is created
     portfolio_thumbnails_size: 150
+    portfolio_full_size: 300
     onDelete: cascade # none or cascade, cascade remove all gallery's files
     path_gallery: <?php echo sfConfig::get("sf_upload_dir")."/gallery/\n" ;?>
     theme: admin
