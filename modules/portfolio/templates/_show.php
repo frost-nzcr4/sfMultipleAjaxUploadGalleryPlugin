@@ -56,7 +56,7 @@
 
         <?php foreach ($gallery->getPhotos() as $photo) { ?>
             <li>
-                <a class="thumb" name="<?php echo $photo->getTitle() ?>" href="<?php echo $correctPath.$gallery->getId() . '/' . sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_portfolio_full_size") . '/' . $photo->getPicPath() ?>" title="<?php echo $photo->getTitle() ?>">
+                <a class="thumb" name="<?php echo $photo->getTitle() ?>" href="<?php echo $correctPath.$gallery->getId() . '/' . sfConfig::get('app_sfMultipleAjaxUploadGalleryPlugin_portfolio_full_size') . '/' . $photo->getPicPath() ?>" title="<?php echo $photo->getTitle() ?>">
                     <img src="<?php echo $correctPath.$gallery->getId()."/".sfConfig::get("app_sfMultipleAjaxUploadGalleryPlugin_portfolio_thumbnails_size")."/".$photo->getPicPath() ?>" alt="<?php echo $photo->getTitle() ?>" />
                 </a>
                 <div class="caption">

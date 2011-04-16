@@ -19,6 +19,7 @@ all:
       - 300
       - 450
     default_size: 50                # default, if not in thumbnails_sizes array new thumbnail is created
+    gallery_thumbnail_size: 50
     portfolio_thumbnails_size: 150
     portfolio_full_size: 300
     onDelete: cascade               # none or cascade, cascade remove all gallery's files

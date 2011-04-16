@@ -54,7 +54,7 @@
                     if($photos->count() > 0): ?>
                         <?php foreach( $photos as $i=>$photo ): ?>
                         <div style="background: none repeat scroll 0 0 #F3F3F3; border: 1px dashed #5D5D5D; clear: both; display: none; margin-top: 15px; padding: 5px;" id="<?php echo $photo->getId(); ?>_editable" class="editable">
-                            <div style="float: left;margin-right: 5px"><img class="basic" src="/uploads/gallery/<?php echo $photo->getGalleryId()."/50/".$photo->getPicpath(); ?>"/></div>
+                            <div style="float: left;margin-right: 5px"><img class="basic" src="/uploads/gallery/<?php echo $photo->getGalleryId() . '/' . sfConfig::get('app_sfMultipleAjaxUploadGalleryPlugin_gallery_thumbnail_size') . '/' . $photo->getPicpath(); ?>"/></div>
                             <p>Indiquez la description pour l'image sélectionnée</p>
                             <input id="<?php echo $photo->getId()."_value" ?>" type="textarea" value="<?php echo $photo->getTitle() ?>"/>
                             <input onclick="saveTitle(<?php echo $photo->getId();?>)" type="button" value="OK"/>
@@ -65,7 +65,7 @@
                         <?php foreach( $photos as $i=>$photo ): ?>
                         <div id="photo-<?php echo $photo->getId()?>" class="picture"  onclick="$(this).find('.actions').toggle();titlize('<?php echo $photo->getId(); ?>_editable');" onmouseover="$(this).find('.actions').show();" onmouseout="$(this).find('.actions').hide();">
                             <?php if($photo->getIsDefault()){ ?> <div id="default" title="Cette photo est l'image utilisée pour la couverture de la galerie"></div><?php } ?>
-                            <img class="basic" src="/uploads/gallery/<?php echo $photo->getGalleryId()."/50/".$photo->getPicpath(); ?>"/>
+                            <img class="basic" src="/uploads/gallery/<?php echo $photo->getGalleryId() . '/' . sfConfig::get('app_sfMultipleAjaxUploadGalleryPlugin_gallery_thumbnail_size') . '/' . $photo->getPicpath(); ?>"/>
                           <div class="actions">
                             <?php if(!$photo->getIsDefault()): ?>
 
