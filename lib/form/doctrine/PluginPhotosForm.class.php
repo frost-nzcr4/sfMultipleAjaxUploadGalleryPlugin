@@ -24,7 +24,7 @@ abstract class PluginPhotosForm extends BasePhotosForm
 
         $this->widgetSchema['picpath'] = new sfWidgetFormInputFileEditable(array(
 	            'label'     => 'Image :',
-	            'file_src'  => $path_gallery.$default_size.$this->getObject()->getPicpath(),
+	            'file_src'  => $path_gallery.$default_size . '/' . $this->getObject()->getPicpath(),
 	            'is_image'  => true,
 	            'edit_mode' => !$this->isNew(),
 	            'template'  => '<div>%file%<br />%input%<br />%delete% %delete_label%</div>',
