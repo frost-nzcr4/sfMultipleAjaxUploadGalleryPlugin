@@ -1,18 +1,19 @@
 <style type="text/css">
-    .slideshow img{
-        max-width: 650px;
-        max-height: 500px;
-    }
-    #controls{
-        text-align:center;
-        width:160px;
-    }
+.slideshow img {
+	max-width: 650px;
+	max-height: 500px;
+}
+#controls{
+	text-align:center;
+	width:160px;
+}
 #controls .ss-controls .play, #controls .ss-controls .pause, #controls .nav-controls .next, #controls .nav-controls .prev {
-        display:block;
-        height:50px;
-        width:50px;
-        margin:0px 100px;
-        position:absolute;
+	display: block;
+	height: 50px;
+	width: 50px;
+	margin: 0px 100px;
+	position: absolute;
+	overflow: hidden;
 }
 #controls .ss-controls .play {
 	background: url("/sfMultipleAjaxUploadGalleryPlugin/images/controls/controls.png") no-repeat -50px 0px;
